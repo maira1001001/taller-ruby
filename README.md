@@ -17,4 +17,5 @@ práctica 2
   ii. Minor version: cuando se le agrega funcionalidad de manera compatible con versiones anteriores
   
   iii. Patch version: correcciones de errores compatibles con versiones anteriores
+3. [Operadores Unarios](http://www.rubyinside.com/rubys-unary-operators-and-how-to-redefine-their-functionality-5610.html?utm_source=rubyweekly&utm_medium=email)
 
