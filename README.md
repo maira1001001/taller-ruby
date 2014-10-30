@@ -10,3 +10,11 @@ práctica 2
 #CHEAT SHEET
 
 1. [Checking regular expression](http://rubular.com/)
+2. [Semantic Versioning X.Y.Z](http://semver.org/)
+
+  i.  Mayor version : cuando se realizan cambios en la API que produce incompatibilidad
+  
+  ii. Minor version: cuando se le agrega funcionalidad de manera compatible con versiones anteriores
+  
+  iii. Patch version: correcciones de errores compatibles con versiones anteriores
+
