@@ -21,4 +21,7 @@ práctica 2
 3. [Operadores Unarios](http://www.rubyinside.com/rubys-unary-operators-and-how-to-redefine-their-functionality-5610.html?utm_source=rubyweekly&utm_medium=email)
 
   i. "Magic String" `+@`, `-@`, `!`, `~`, `&`, `*` =>   `+str`,`-str`, `!str`, `~str ` 
+  
+4. [Lazy Refactoring](http://robots.thoughtbot.com/lazy-refactoring)
+5. [Rust](https://medium.com/@adamhjk/rust-and-go-e18d511fbd95)
 
