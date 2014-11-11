@@ -1,0 +1,8 @@
+5. Pruebe las diferencias entre Hash#[] y Hash#fetch con uno y con dos argumentos.
+
+Hash#[]  -> ArgumentError: wrong number of arguments (0 for 1)
+
+Hash#fetch -> ArgumentError: wrong number of arguments (0 for 1..2)
+
+
+
