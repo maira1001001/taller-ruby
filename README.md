@@ -24,4 +24,7 @@ práctica 2
   
 4. [Lazy Refactoring](http://robots.thoughtbot.com/lazy-refactoring)
 5. [Rust](https://medium.com/@adamhjk/rust-and-go-e18d511fbd95)
+6. [Pattern: Convention over configuration](http://es.wikipedia.org/wiki/Convenci%C3%B3n_sobre_Configuraci%C3%B3n)
+7. Fat model thin controller | Thin model thin controller
+8. [DSL: Domain Specific Language](http://es.wikipedia.org/wiki/Lenguaje_espec%C3%ADfico_del_dominio)
 
