@@ -1,0 +1,23 @@
+https://github.com/fernandolopez/capacitacion-ruby-ttps/blob/master/actividades/practicas/practica-03.md
+
+
+Cree la clase Robot y la clase Humano, implemente:
+
+Robot#atacar que recibe una instancia de que matar.
+Robot#tirar_pilas que recibe un símbolo que indica en que lugar se descartarán las pilas.
+Humano#recibir_ataque que recibe la instancia del atacante.
+El método Robot#atacar deben seguir las 3 leyes de la robótica y además la ley 0.
+
+Cuando un robot reciba una orden que vaya contra las leyes debe lanzar una exepción con una descripción acorde.
+
+Por ejemplo:
+
+luke = Humano.new
+c3po = Robot.new
+r2d2 = Robot.new
+c3po.atacar luke # Debe lanzar una exepción porque viola la ley 2.
+c3po.atacar r2d2 # No viola ninguna ley
+c3po.atacar c3po # Viola la 3° ley
+c3po.tirar_pilas :cesto_reciclables # No viola ninguna ley
+c3po.tirar_pilas :mar # Viola la ley 0
+c3po.tirar_pilas :sdadwe # Lanza una excepción porque el lugar no es válido
