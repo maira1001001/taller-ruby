@@ -3,7 +3,8 @@ require 'json'
 class Movies
 
   def search(**hash)
-    web_page = open (absolute_uri(hash[:title],hash[:year]))
+    year = Integer hash[:year]
+    web_page = open (absolute_uri(hash[:title],year))
     result = parse_data web_page
     {title: result['Title'], year: result['Year'], imdbID: result['imdbID'], type: result['Type']}
   rescue OpenURI::HTTPError => e
