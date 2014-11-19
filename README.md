@@ -3,9 +3,12 @@ taller-ruby
 
 ejercicios del taller Ruby
 
+
 práctica 2 
 [Bloques - Modulos  y mixins - Clases y Objetos](https://github.com/fernandolopez/capacitacion-ruby-ttps/blob/master/actividades/practicas/practica-02.md)
 
+práctica 3
+[Excepciones, Bundler/Gemas y Tests](https://github.com/fernandolopez/capacitacion-ruby-ttps/blob/master/actividades/practicas/practica-03.md)
 
 #CHEAT SHEET
 
