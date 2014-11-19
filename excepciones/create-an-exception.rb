@@ -1,12 +1,13 @@
-class AnError < StandardError; end
+class AnError < StandardError
+end
 
 def testException(arg)
-  raise AnError if arg.nil?
-  puts "arg no es nil. No se levanta la excepcion"
+  raise AnError, "arg is Nil !!!" if arg.nil?
+  puts "arg is not Nil. So, there is no exception to raise"
 end
 
 begin
   testException(nil)
-rescue AnError
-  p "Ocurrio que el string era nil"
+rescue AnError => details
+  p "The message of the exception : #{details}"
 end
