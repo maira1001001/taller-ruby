@@ -26,7 +26,7 @@ describe Contribuyente do
       assert_raises(ArgumentError, "#nombre is required"){Contribuyente.new("Maira Diaz", 111)}
     end
     it 'should raise an error for this'do
-      assert_raises(StandardError, "#nombre must be a string"){Contribuyente.new(234, "Diaz", 111,222,123456789)}
+      lambda {Contribuyente.new(234, "Diaz", 111,222,123456789)}.must_raise(StandardError, "#nombre must be a string")
       #Contribuyente.new(123456, "Diaz", 111,222,333) -> ArgumentError !!!
     end
     it 'should raise an error if it is an empty name'do
