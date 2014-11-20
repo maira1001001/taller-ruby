@@ -3,7 +3,7 @@ require_relative 'contribuyente'
 
 describe Contribuyente do
 
-  # let(:contribuyente){Contribuyente.new("Maira", "Diaz", 111111111, 5200)}
+  let(:contribuyente){Contribuyente.new("Maira", "Diaz", 111,222,123456789)}
 
   describe 'the type of Object we are dealing with' do
     it 'is an instance Contribuyente' do
@@ -14,15 +14,12 @@ describe Contribuyente do
 
   describe 'when we asked about the #nombre' do
     it 'should not be empty' do
-      contribuyente = Contribuyente.new("Maira", "Diaz", 111,222,33333333333)
       contribuyente.nombre.wont_be_empty
     end
     it 'should return an string' do
-      contribuyente = Contribuyente.new("Maira", "Diaz",111,222,33333333333)
       contribuyente.nombre.must_be_instance_of String
     end
     it 'should be consistent' do
-      contribuyente = Contribuyente.new("Maira", "Diaz",111,222,33333333333)
       contribuyente.nombre.must_equal "Maira"
     end
     it 'is required' do
@@ -40,7 +37,6 @@ describe Contribuyente do
 
   describe 'when we asked about the #deuda' do
     it 'should be a number' do
-      contribuyente = Contribuyente.new("Maira", "Diaz", 111,222,33333333333)
       contribuyente.deuda.must_be_kind_of Numeric
     end
     it 'sholud be zero if the user has no debt' do
@@ -48,7 +44,6 @@ describe Contribuyente do
       contribuyente.deuda.must_equal 0
     end
     it 'should be consistent' do
-      contribuyente = Contribuyente.new("Maira", "Diaz", 111,222,33333333)
       contribuyente.deuda.must_equal 222
     end
     it 'should not be empty'do
@@ -58,7 +53,6 @@ describe Contribuyente do
 
   describe 'when we asked about the #ingresos ' do
     it 'should be a number'do
-      contribuyente = Contribuyente.new("Maira", "Diaz",111,222,33333333333)
       contribuyente.ingresos.must_be_kind_of Numeric
     end
     it 'should return the minimun wage if you do not specify nothing' do
@@ -66,7 +60,6 @@ describe Contribuyente do
       contribuyente.ingresos.must_equal contribuyente.salarioMinimo
     end
     it 'should be consistent' do
-      contribuyente = Contribuyente.new("Maira", "Diaz", 111,222, 123456789)
       contribuyente.ingresos.must_be_close_to  123456789
     end
     it 'should raise an exception for these two' do
