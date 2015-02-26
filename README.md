@@ -30,4 +30,6 @@ práctica 3
 6. [Pattern: Convention over configuration](http://es.wikipedia.org/wiki/Convenci%C3%B3n_sobre_Configuraci%C3%B3n)
 7. Fat model thin controller | Thin model thin controller
 8. [DSL: Domain Specific Language](http://es.wikipedia.org/wiki/Lenguaje_espec%C3%ADfico_del_dominio)
+9. [Ruby 2.0 Works Hard So You Can Be Lazy](http://patshaughnessy.net/2013/4/3/ruby-2-0-works-hard-so-you-can-be-lazy)
+
 
