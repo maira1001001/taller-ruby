@@ -1,6 +1,6 @@
 #The Ruby Style Guide
 
-##Nombres
+##Names
 
 * Símbolos, métodos y variables: `snake_case` 
 
