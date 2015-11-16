@@ -182,7 +182,9 @@
     'test'.upcase
     ```
     
-    * Elige `{...}` por sobre `do...end` para bloques de una línea. Evita
+    *Bloques de una línea , bloques multilíneas
+    
+    Elige `{...}` por sobre `do...end` para bloques de una línea. Evita
   el uso de `{...}` para bloques multilíneas (encadenamiento de multilínea
   siempre es horrible). Siempre usá `do...end` para "contorl de flujo" y
   "definiciones de métodos" (e.g. en Rakefiles y algunos DSLs). Evita usar
@@ -211,4 +213,87 @@
     Puede ser que algunas personas piensen que el encadenamiento en multilínea se vería bien con
     el uso de {...}, pero en realidad deberían preguntarse a sí mismos - es el código realmente
     legible y los contenidos de los bloques pueden ser extraídos con métodos elegantes?
+
+*control de flujo: `return`
+
+Evita usar `return` cuando no se requiera realizar control de flujo.
+
+    ```Ruby
+    # mal
+    def some_method(some_arr)
+      return some_arr.size
+    end
+
+    # bien
+    def some_method(some_arr)
+      some_arr.size
+    end
+    ```
+* `self` : acceso a sí mismo
+
+Evita usar `self` cuando no es necesario. (Solo se necesita cuando se llama a un accesor de escritura propio.)
+
+    ```Ruby
+    # mal
+    def ready?
+      if self.last_reviewed_at > self.last_updated_at
+        self.worker.update(self.content, self.options)
+        self.status = :in_progress
+      end
+      self.status == :verified
+    end
+
+    # bien
+    def ready?
+      if last_reviewed_at > last_updated_at
+        worker.update(content, options)
+        self.status = :in_progress
+      end
+      status == :verified
+    end
+    ```
+* Asignación en expresiones condicionales
+
+No uses el valor de retorno de `=` (asignación) en expresiones
+condicionales a menos que la asignación se encuentre entre paréntesis.
+Esta es una expresión bastante popular entre los Rubyistas que se
+refiere a veces como *asignación segura en condiciones*.
+
+    ```Ruby
+    # mal 
+    if v = array.grep(/foo/)
+      do_something(v)
+      ...
+    end
+
+    # bien, aunque no es conveniente 
+    if (v = array.grep(/foo/))
+      do_something(v)
+      ...
+    end
+
+    # bien
+    v = array.grep(/foo/)
+    if v
+      do_something(v)
+      ...
+    end
+    ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
