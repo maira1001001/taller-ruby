@@ -20,3 +20,12 @@ pasaría si el valor actual fuese `false`.)
     # bien
     enabled = true if enabled.nil?
     ```
+* Usa `_` para los parámetros sin usar de bloques.
+
+    ```Ruby
+    # mal
+    result = hash.map { |k, v| v + 1 }
+
+    # bien
+    result = hash.map { |_, v| v + 1 }
+    ```
