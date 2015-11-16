@@ -34,3 +34,9 @@ Métodos de una sola línea
   end
 
   ```
+  Una excepción a la regla son los métodos vacios
+  
+ ```Ruby
+  # bien
+  def no_op; end
+  ```
