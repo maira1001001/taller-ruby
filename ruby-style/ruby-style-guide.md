@@ -31,6 +31,6 @@ Métodos de una sola línea
   # bien
   def some_method
     body
-    end
+  end
 
-    ```
+  ```
