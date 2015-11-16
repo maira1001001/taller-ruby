@@ -7,7 +7,7 @@
 Prefiere el uso de la notación para arrays literales y creación de hashes
 (excepto que necesites pasar parámetros a sus constructores).
 
-    ```Ruby
+```Ruby
     # mal
     arr = Array.new
     hash = Hash.new
@@ -15,7 +15,7 @@ Prefiere el uso de la notación para arrays literales y creación de hashes
     # bien
     arr = []
     hash = {}
-    ```
+```
 
 * Array de string
 
@@ -24,13 +24,13 @@ necesites un array de palabras (strings no-vacías sin espacios ni
 caracteres espaciales en cada uno). Aplicá esta regla solo en los arrays
 de dos o más elementos.
 
-    ```Ruby
+```Ruby
     # mal
     STATES = ['draft', 'open', 'closed']
 
     # bien
     STATES = %w(draft open closed)
-    ```
+ ```
 * Array de símbolos
 
 Prefiere `%i` en lugar de la sintaxis de array literal cuando
@@ -38,13 +38,13 @@ necesites un array de símbolos (y no necesitás mantener compatibilidad
 con Ruby 1.9). Aplicá esta regla sólo para arrays con dos o más
 elementos.
 
-    ```Ruby
+```Ruby
     # mal
     STATES = [:draft, :open, :closed]
 
     # bien
     STATES = %i(draft open closed)
-    ```
+```
 
 * Cuando estés accediendo al primer o último elmento de un array, preferí
 usar `first` o `last` en lugar de `[0]` o `[-1]`.
