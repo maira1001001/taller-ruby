@@ -280,6 +280,103 @@ refiere a veces como *asignación segura en condiciones*.
     end
     ```
 
+* Usa la nueva sintaxis de lambda literal para bloques de una sola línea.
+  Usa el método `lambda` para bloques multilínea.
+
+    ```Ruby
+    # mal
+    l = lambda { |a, b| a + b }
+    l.call(1, 2)
+
+    # correcto, pero se ve extremadamente incómodo
+    l = ->(a, b) do
+      tmp = a * 7
+      tmp * b / 50
+    end
+
+    # bien
+    l = ->(a, b) { a + b }
+    l.call(1, 2)
+
+    l = lambda do |a, b|
+      tmp = a * 7
+      tmp * b / 50
+    end
+  ```
+
+* Elige `proc` por sobre `Proc.new`.
+
+    ```Ruby
+    # mal
+    p = Proc.new { |n| puts n }
+
+    # bien
+    p = proc { |n| puts n }
+    ```
+
+* Elige `proc.call()` por sobre `proc[]` o `proc.()` tanto para lambdas y procs.
+
+    ```Ruby
+    # mal - se ve similar a un acceso de Enumeración
+    l = ->(v) { puts v }
+    l[1]
+
+
+    # también mal - sintaxis no común
+    l = ->(v) { puts v }
+    l.(1)
+
+    # bien
+    l = ->(v) { puts v }
+    l.call(1)
+    ```
+
+* Usa rangos o `Comparable#between?` en lugar de una comparación lógica
+  compleja cuando sea posible.
+
+    ```Ruby
+    # mal
+    do_something if x >= 1000 && x <= 2000
+
+    # bien
+    do_something if (1000..2000).include?(x)
+
+    # bien
+    do_something if x.between?(1000, 2000)
+    ```
+
+* Un poco de sentido común... y dejando de lado lo antiguo
+
+  Elige el uso de métodos subyacentes en lugar de las comparaciones
+  explícitas con `==`. Comparaciones numéricas están OK.
+
+    ```Ruby
+    # mal
+    if x % 2 == 0
+    end
+
+    if x % 2 == 1
+    end
+
+    if x == nil
+    end
+
+    # bien
+    if x.even?
+    end
+
+    if x.odd?
+    end
+
+    if x.nil?
+    end
+
+    if x.zero?
+    end
+
+    if x == 0
+    end
+    ```
 
 
 
