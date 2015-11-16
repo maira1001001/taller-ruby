@@ -16,9 +16,6 @@
       # afterwards we have attribute macros
       attr_reader :name
 
-      # followed by other macros (if any)
-      validates :name
-
       # public class methods are next in line
       def self.some_method
       end
