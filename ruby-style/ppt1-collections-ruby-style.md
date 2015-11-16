@@ -18,10 +18,10 @@
 
     ```Ruby
     # mal
-    STATES = %w(draft open closed)
-   
-    #bien
     STATES = ['draft', 'open', 'closed']
+    
+    #bien
+    STATES = %w(draft open closed)
     ```
 * Array de símbolos
 
