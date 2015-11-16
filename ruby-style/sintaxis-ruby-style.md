@@ -336,6 +336,9 @@ refiere a veces como *asignación segura en condiciones*.
     if x == nil
     end
 
+    if x == 0
+    end
+    
     # bien
     if x.even?
     end
@@ -349,8 +352,6 @@ refiere a veces como *asignación segura en condiciones*.
     if x.zero?
     end
 
-    if x == 0
-    end
     ```
 
 
