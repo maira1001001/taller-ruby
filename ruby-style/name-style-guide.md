@@ -74,7 +74,5 @@ ejemplo: `Array#empty?`
 
 * Métodos potencialmente peligrosos: deben terminar con un signo de exclamación `!` 
 
-ejemplo: métodos que modifican `self` o los argumentos, `exit!` - no ejecuta
-finalizadores como lo hace `exit`, etc.) deben terminar con un signo
-de exclamación solo si existe una versión segura de ese método
-*peligroso*.
+http://ruby-doc.org/core-2.2.0/String.html
+
