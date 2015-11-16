@@ -379,6 +379,7 @@ refiere a veces como *asignación segura en condiciones*.
     ```
 
 
+
 * If anidados vs return 
 
 Evita el uso de condicionales anidados para control de flujo.
@@ -386,7 +387,7 @@ Elige una cláusula de guardia (guard clause) cuando puedas afirmar datos invál
 Una cláusula de guardia es un condicional al principio de una función que trata de
 salir de ella tan pronto como pueda.
 
-    ```Ruby
+```Ruby
     # mal
       def compute_thing(thing)
         if thing[:foo]
@@ -406,7 +407,7 @@ salir de ella tan pronto como pueda.
         return re_compute(thing) unless thing[:foo][:bar]
         partial_compute(thing)
       end
-    ```
+```
 
 
 
