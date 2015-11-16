@@ -2,8 +2,7 @@
 
 ##Sintaxis
 
-* Usa `def` con paréntesis cuando tengas argumentos. Omite los
-  paréntesis cuando el método no acepta ningún argumento.
+* Usa `def` con paréntesis 
 
      ```Ruby
      # mal
@@ -27,9 +26,8 @@
      end
      ```
 
-* Nunca uses `for`, a menos que sepas exactamente para qué lo usás. En su
-  lugar deberías usar los iteradores la mayor parte del tiempo. `for` se
-  debe implementar en forma de `each` (asi estás agregando un nivel de
+* Utiliza los iteradores en vez de `for`. 
+`for` se  debe implementar en forma de `each` (asi estás agregando un nivel de
   indirección), pero con una peculiaridad - `for` no introduce un nuevo
   scope (a diferencia de `each`) y las variables que se definen dentro
   de su bloque son visibles fuera del mismo.
@@ -52,8 +50,8 @@
     elem #=> NameError: undefined local variable or method `elem'
     ```
 
-* Prefiere el operador ternario (`?:`) en lugar de las construcciones
-  `if/then/else/end`. Es más común y obviamente más conciso.
+* Operador ternario (`?:`) en lugar de las construcciones
+  `if/then/else/end`
 
     ```Ruby
     # mal
@@ -62,9 +60,7 @@
     # bien
     result = some_condition ? something : something_else
     ```
-* Usa una expresión por fila por operador ternario. Esto también
-  significa que los operadores ternarios no deben anidarse. Es
-  preferible utilizar construcciones `if/else` en estos casos.
+* Otro ejemplo del operador ternario
 
     ```Ruby
     # mal
@@ -77,7 +73,7 @@
       something_else
     end
     ```
-* Favorecé al uso del modificador `if/unless` cuando tengas que escribir en una línea.
+*  `if/unless` en una línea.
 
     ```Ruby
     # mal
@@ -88,7 +84,7 @@
     # bien
     do_something if some_condition
     ```
-* Favorecé `unless` por sobre `if` para condiciones negativas.
+* `unless` por sobre `if`:  para condiciones negativas.
 
     ```Ruby
     # mal
@@ -101,7 +97,9 @@
     do_something unless some_condition
     ```
 
-* Nunca uses `unless` con `else`. Reescribe para que el caso positivo esté primero.
+* Nunca uses `unless` con `else`. 
+ 
+Reescribe para que el caso positivo esté primero.
 
     ```Ruby
     # mal
