@@ -216,7 +216,7 @@ Reescribe para que el caso positivo esté primero.
 
 Evita usar `return` cuando no se requiera realizar control de flujo.
 
-    ```Ruby
+```Ruby
     # mal
     def some_method(some_arr)
       return some_arr.size
@@ -226,12 +226,12 @@ Evita usar `return` cuando no se requiera realizar control de flujo.
     def some_method(some_arr)
       some_arr.size
     end
-    ```
+```
 * `self` : acceso a sí mismo
 
 Evita usar `self` cuando no es necesario. (Solo se necesita cuando se llama a un accesor de escritura propio.)
 
-    ```Ruby
+```Ruby
     # mal
     def ready?
       if self.last_reviewed_at > self.last_updated_at
@@ -249,7 +249,7 @@ Evita usar `self` cuando no es necesario. (Solo se necesita cuando se llama a un
       end
       status == :verified
     end
-    ```
+ ```
 * Asignación en expresiones condicionales
 
 No uses el valor de retorno de `=` (asignación) en expresiones
@@ -257,7 +257,7 @@ condicionales a menos que la asignación se encuentre entre paréntesis.
 Esta es una expresión bastante popular entre los Rubyistas que se
 refiere a veces como *asignación segura en condiciones*.
 
-    ```Ruby
+```Ruby
     # mal 
     if v = array.grep(/foo/)
       do_something(v)
@@ -276,12 +276,12 @@ refiere a veces como *asignación segura en condiciones*.
       do_something(v)
       ...
     end
-    ```
+```
 
 * Usa la nueva sintaxis de lambda literal para bloques de una sola línea.
   Usa el método `lambda` para bloques multilínea.
 
-    ```Ruby
+```Ruby
     # mal
     l = lambda { |a, b| a + b }
     l.call(1, 2)
@@ -300,7 +300,7 @@ refiere a veces como *asignación segura en condiciones*.
       tmp = a * 7
       tmp * b / 50
     end
-  ```
+```
 
 * Elige `proc` por sobre `Proc.new`.
 
