@@ -379,6 +379,34 @@ refiere a veces como *asignación segura en condiciones*.
     ```
 
 
+* If anidados vs return 
+
+Evita el uso de condicionales anidados para control de flujo.
+Elige una cláusula de guardia (guard clause) cuando puedas afirmar datos inválidos.
+Una cláusula de guardia es un condicional al principio de una función que trata de
+salir de ella tan pronto como pueda.
+
+    ```Ruby
+    # mal
+      def compute_thing(thing)
+        if thing[:foo]
+          update_with_bar(thing)
+          if thing[:foo][:bar]
+            partial_compute(thing)
+          else
+            re_compute(thing)
+          end
+        end
+      end
+
+    # bien
+      def compute_thing(thing)
+        return unless thing[:foo]
+        update_with_bar(thing[:foo])
+        return re_compute(thing) unless thing[:foo][:bar]
+        partial_compute(thing)
+      end
+    ```
 
 
 
