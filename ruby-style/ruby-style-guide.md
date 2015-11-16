@@ -2,7 +2,7 @@
 
 ##Estructura del Código Fuente
 
-Una clase sin cuerpo
+*Una clase sin cuerpo
 
 ```Ruby
   # bad
@@ -13,7 +13,7 @@ Una clase sin cuerpo
   class FooError < StandardError; end
 
   ```
-Métodos de una sola línea
+*Métodos de una sola línea
 
   ```Ruby
   # mal
@@ -34,15 +34,15 @@ Métodos de una sola línea
   end
 
   ```
-  Una excepción a la regla son los métodos vacios
+ * Una excepción a la regla son los métodos vacios
   
  ```Ruby
   # bien
   def no_op; end
   ```
-Indentación
+*Indentación
 
-Sentencia `case`
+*Sentencia `case`
 
 ```Ruby
   # mal
@@ -121,3 +121,113 @@ Sentencia `case`
       else
         calc_something_else
       end
+  ```
+  
+* Usa espacios alrededor del operador `=` cuando asignes valores predeterminados a los
+  parámetros del método:
+
+    ```Ruby
+    # mal
+    def some_method(arg1=:default, arg2=nil, arg3=[])
+      # do something...
+    end
+
+    # bien
+    def some_method(arg1 = :default, arg2 = nil, arg3 = [])
+      # do something...
+    end
+    ```
+* Al continuar una invocación de método encadenado en otra línea mantener el `.` en la segunda línea.
+
+    ```Ruby
+    # mal - es necesario leer la primer línea para entender la segunda línea
+    one.two.three.
+      four
+
+    # bien - inmediatamente se ve qué está pasando en la segunda línea
+    one.two.three
+      .four
+    ```
+* Alinea los parámetros de una llamada a un método si ocupan más de una
+  línea. Cuando se alinean los parámetros no es apropiado que sea con
+  más indentación de lo debido, y utilizar un indentado único para las
+  líneas luego del primer parámetro también es aceptable.
+
+    ```Ruby
+    # punto de partida (la línea es muy larga)
+    def send_mail(source)
+      Mailer.deliver(to: 'bob@example.com', from: 'us@example.com', subject: 'Important message', body: source.text)
+    end
+
+    # mal (doble indentado)
+    def send_mail(source)
+      Mailer.deliver(
+          to: 'bob@example.com',
+          from: 'us@example.com',
+          subject: 'Important message',
+          body: source.text)
+    end
+
+    # bien
+    def send_mail(source)
+      Mailer.deliver(to: 'bob@example.com',
+                     from: 'us@example.com',
+                     subject: 'Important message',
+                     body: source.text)
+    end
+
+    # bien (indentado normal)
+    def send_mail(source)
+      Mailer.deliver(
+        to: 'bob@example.com',
+        from: 'us@example.com',
+        subject: 'Important message',
+        body: source.text
+      )
+    end
+    ```
+
+* Alinea los elementos de arrays literales que ocupen múltiples líneas.
+
+    ```Ruby
+    # mal - indentado simple
+    menu_item = ["Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam",
+      "Baked beans", "Spam", "Spam", "Spam", "Spam", "Spam"]
+
+    # bien
+    menu_item = [
+      "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam",
+      "Baked beans", "Spam", "Spam", "Spam", "Spam", "Spam"
+    ]
+
+    # bien
+    menu_item =
+      ["Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam",
+       "Baked beans", "Spam", "Spam", "Spam", "Spam", "Spam"]
+    ```
+
+* Agrega guiones bajos para números literales grandes para mejorar su lectura.
+
+    ```Ruby
+    # mal - cuantos 0s hay ahi?
+    num = 1000000
+
+    # bien - mucho más fácil de leer por el cerebro humano
+    num = 1_000_000
+    ```
+* Limitá las líneas a 80 caracteres.
+* Evita los espacios en blanco.
+* No uses los comentarios de bloque. Ellos no pueden tener espacios en blanco
+  antes y no son tan fáciles de entenderlos como comentarios.
+
+    ```Ruby
+    # mal
+    == begin
+    comment line
+    another comment line
+    == end
+
+    # bien
+    # comment line
+    # another comment line
+    ```
