@@ -42,6 +42,8 @@ Métodos de una sola línea
   ```
 Indentación
 
+Sentencia `case`
+
 ```Ruby
   # mal
   case
@@ -67,3 +69,55 @@ Indentación
     song.play
   end
   ```
+* Al asignar el resultado de una expresión condicional a una variable, conservá la alineación de su ramificación.
+  ```Ruby
+  
+    # mal - bastante complejo
+    kind = case year
+    when 1850..1889 then 'Blues'
+    when 1890..1909 then 'Ragtime'
+    when 1910..1929 then 'New Orleans Jazz'
+    when 1930..1939 then 'Swing'
+    when 1940..1950 then 'Bebop'
+    else 'Jazz'
+    end
+    
+    result = if some_cond
+      calc_something
+    else
+      calc_something_else
+    end
+    
+    # bien - es aparente qué está pasando
+    kind = case year
+           when 1850..1889 then 'Blues'
+           when 1890..1909 then 'Ragtime'
+           when 1910..1929 then 'New Orleans Jazz'
+           when 1930..1939 then 'Swing'
+           when 1940..1950 then 'Bebop'
+           else 'Jazz'
+           end
+    
+    result = if some_cond
+               calc_something
+             else
+               calc_something_else
+             end
+    
+    # bien (y con un espacio más eficiente)
+    kind =
+      case year
+      when 1850..1889 then 'Blues'
+      when 1890..1909 then 'Ragtime'
+      when 1910..1929 then 'New Orleans Jazz'
+      when 1930..1939 then 'Swing'
+      when 1940..1950 then 'Bebop'
+      else 'Jazz'
+      end
+    
+    result =
+      if some_cond
+        calc_something
+      else
+        calc_something_else
+      end
