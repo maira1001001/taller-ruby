@@ -2,7 +2,7 @@
 
 ##Estructura del Código Fuente
 
-*Una clase sin cuerpo
+* Una clase sin cuerpo
 
 ```Ruby
   # bad
@@ -13,7 +13,7 @@
   class FooError < StandardError; end
 
   ```
-*Métodos de una sola línea
+* Métodos de una sola línea
 
   ```Ruby
   # mal
@@ -40,9 +40,9 @@
   # bien
   def no_op; end
   ```
-*Indentación
+* Indentación
 
-*Sentencia `case`
+* Sentencia `case`
 
 ```Ruby
   # mal
