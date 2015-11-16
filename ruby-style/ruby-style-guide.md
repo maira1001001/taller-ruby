@@ -40,3 +40,30 @@ Métodos de una sola línea
   # bien
   def no_op; end
   ```
+Indentación
+
+```Ruby
+  # mal
+  case
+    when song.name == 'Misty'
+      puts 'Not again!'
+    when song.duration > 120
+      puts 'Too long!'
+    when Time.now.hour > 21
+      puts "It's too late"
+    else
+      song.play
+  end
+
+  # bien
+  case
+  when song.name == 'Misty'
+    puts 'Not again!'
+  when song.duration > 120
+    puts 'Too long!'
+  when Time.now.hour > 21
+    puts "It's too late"
+  else
+    song.play
+  end
+  ```
