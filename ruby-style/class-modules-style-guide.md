@@ -54,33 +54,3 @@
     end
     ```
 
-* Usa la familia de funciones `attr` para definir accesores triviales
-o mutators.
-
-    ```Ruby
-    # mal
-    class Person
-      def initialize(first_name, last_name)
-        @first_name = first_name
-        @last_name = last_name
-      end
-
-      def first_name
-        @first_name
-      end
-
-      def last_name
-        @last_name
-      end
-    end
-
-    # bien
-    class Person
-      attr_reader :first_name, :last_name
-
-      def initialize(first_name, last_name)
-        @first_name = first_name
-        @last_name = last_name
-      end
-    end
-    ```
