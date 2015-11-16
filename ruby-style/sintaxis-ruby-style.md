@@ -214,7 +214,7 @@
     el uso de {...}, pero en realidad deberían preguntarse a sí mismos - es el código realmente
     legible y los contenidos de los bloques pueden ser extraídos con métodos elegantes?
 
-*control de flujo: `return`
+* control de flujo: `return`
 
 Evita usar `return` cuando no se requiera realizar control de flujo.
 
