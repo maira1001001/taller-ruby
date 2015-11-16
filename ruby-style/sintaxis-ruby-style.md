@@ -101,7 +101,7 @@
  
 Reescribe para que el caso positivo esté primero.
 
-    ```Ruby
+ ```Ruby
     # mal
     unless success?
       puts 'failure'
@@ -115,7 +115,7 @@ Reescribe para que el caso positivo esté primero.
     else
       puts 'failure'
     end
-    ```
+  ```
 * No uses paréntesis alrededor de la condición de `if/unless/while/until`.
 
     ```Ruby
