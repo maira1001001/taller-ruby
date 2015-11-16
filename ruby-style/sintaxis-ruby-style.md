@@ -99,7 +99,7 @@
 
 * Nunca uses `unless` con `else`. 
  
-Reescribe para que el caso positivo esté primero.
+Reescribe para que el caso positivo esté primelamro.
 
  ```Ruby
     # mal
@@ -278,29 +278,6 @@ refiere a veces como *asignación segura en condiciones*.
     end
 ```
 
-* Usa la nueva sintaxis de lambda literal para bloques de una sola línea.
-  Usa el método `lambda` para bloques multilínea.
-
-```Ruby
-    # mal
-    l = lambda { |a, b| a + b }
-    l.call(1, 2)
-
-    # correcto, pero se ve extremadamente incómodo
-    l = ->(a, b) do
-      tmp = a * 7
-      tmp * b / 50
-    end
-
-    # bien
-    l = ->(a, b) { a + b }
-    l.call(1, 2)
-
-    l = lambda do |a, b|
-      tmp = a * 7
-      tmp * b / 50
-    end
-```
 
 * Elige `proc` por sobre `Proc.new`.
 
