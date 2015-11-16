@@ -25,11 +25,6 @@
     ```
 * Array de símbolos
 
-Prefiere `%i` en lugar de la sintaxis de array literal cuando
-necesites un array de símbolos (y no necesitás mantener compatibilidad
-con Ruby 1.9). Aplicá esta regla sólo para arrays con dos o más
-elementos.
-
 ```Ruby
     # mal
     STATES = [:draft, :open, :closed]
@@ -41,7 +36,7 @@ elementos.
 * Cuando estés accediendo al primer o último elmento de un array, preferí
 usar `first` o `last` en lugar de `[0]` o `[-1]`.
 
-* Prefiere símbolos en lugar de strings y hash keys.
+* Símbolos vs string en  hash keys.
 
 ```Ruby
     # mal
@@ -60,4 +55,3 @@ usar `first` o `last` en lugar de `[0]` o `[-1]`.
     hash = { one: 1, two: 2, three: 3  }
 ```
 
-    ```
