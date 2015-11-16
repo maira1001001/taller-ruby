@@ -34,7 +34,7 @@
 
 (Mantené en mayúsculas los acrónimos como HTTP, RFC, XML.)
 
-    ```Ruby
+```Ruby
     # mal
     class Someclass
       ...
@@ -56,7 +56,7 @@
     class SomeXML
       ...
     end
-    ```
+```
 
 * Constantes: `SCREAMING_SNAKE_CASE`
 
