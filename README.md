@@ -16,7 +16,9 @@ práctica 3
 2. [Semantic Versioning X.Y.Z](http://semver.org/)
 
   >  Mayor version : cuando se realizan cambios en la API que produce incompatibilidad
+  
   > Minor version: cuando se le agrega funcionalidad de manera compatible con versiones anteriores
+  
   > Patch version: correcciones de errores compatibles con versiones anteriores
 
 3. [Operadores Unarios](http://www.rubyinside.com/rubys-unary-operators-and-how-to-redefine-their-functionality-5610.html?utm_source=rubyweekly&utm_medium=email)
