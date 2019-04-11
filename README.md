@@ -10,7 +10,7 @@ práctica 2
 práctica 3
 [Excepciones, Bundler/Gemas y Tests](https://github.com/fernandolopez/capacitacion-ruby-ttps/blob/master/actividades/practicas/practica-03.md)
 
-#CHEAT SHEET
+# CHEAT SHEET
 
 1. [Checking regular expression](http://rubular.com/)
 2. [Semantic Versioning X.Y.Z](http://semver.org/)
